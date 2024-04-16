@@ -6,7 +6,7 @@ class Solution {
     while (l1 != null || l2 != null || carry > 0) {
       if (l1 != null) {
         carry += l1.val;
-        l1 = l1.next;
+        l1 = l1.next; 
       }
       if (l2 != null) {
         carry += l2.val;
