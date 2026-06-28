@@ -1,0 +1,18 @@
+impl Solution {
+    pub fn maximum_element_after_decrementing_and_rearranging(arr: Vec<i32>) -> i32 {
+        let mut arr = arr;
+        let n = arr.len();
+        arr.sort();
+        arr[0] = 1;
+        for i in 1..n{
+            let a = arr[i - 1];
+            let b = arr[i];
+            let diff = b - a;
+            if diff > 1 {
+                arr[i] = a + 1;
+            }
+        }
+        let mx = arr[n - 1];
+        mx
+    }
+}
